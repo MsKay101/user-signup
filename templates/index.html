@@ -1,0 +1,28 @@
+{% extends 'base.html'  %}
+{% block content %}
+<form action="/validate", method="POST" >
+        <table>
+            <tr>
+                <td><label for="username">Username</label></td>
+                <td><input type="text" name="username" >
+                <span class="error">{{usernameError}}</span></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password</label></td>
+                <td><input type="password" name="password" >
+                <span class="error">{{passwordError}}</span></td>
+            </tr>
+            <tr>
+                <td><label for="verify">Verify Password </label></td>
+                <td><input type="password" name="verify">
+                <span class="error">{{verifyError}}</span></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email (Optional)</label></td>
+                <td><input type="text" name="email">
+                <span class="error">{{emailError}}</span></td>
+            </tr>
+        </table>
+        <input type="submit">
+    </form>
+{% endblock %} 
